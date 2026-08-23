@@ -1,0 +1,5 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Construction } from "lucide-react";
+export default function MaintenancePage() { return (<div className="flex min-h-[60vh] items-center justify-center"><Card className="max-w-md w-full text-center"><CardHeader><div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900/30"><Construction className="h-8 w-8 text-yellow-600" /></div><CardTitle>Under Maintenance</CardTitle></CardHeader><CardContent><p className="text-lg font-medium">We will be back soon</p><p className="mt-2 text-muted-foreground">Scheduled maintenance is in progress. This usually takes less than 30 minutes.</p></CardContent><CardFooter className="justify-center"><Button variant="outline" onClick={() => window.location.reload()}>Refresh</Button></CardFooter></Card></div>); }

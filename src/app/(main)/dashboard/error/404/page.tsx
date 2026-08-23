@@ -1,0 +1,5 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { AlertTriangle } from "lucide-react";
+export default function Error404Page() { return (<div className="flex min-h-[60vh] items-center justify-center"><Card className="max-w-md w-full text-center"><CardHeader><div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-destructive/10"><AlertTriangle className="h-8 w-8 text-destructive" /></div><CardTitle className="text-6xl font-bold">404</CardTitle></CardHeader><CardContent><p className="text-lg font-medium">Page Not Found</p><p className="mt-2 text-muted-foreground">The page you are looking for might have been removed or is temporarily unavailable.</p></CardContent><CardFooter className="justify-center gap-2"><Button variant="outline" onClick={() => window.history.back()}>Go Back</Button><Button onClick={() => (window.location.href="/dashboard/default")}>Dashboard</Button></CardFooter></Card></div>); }
